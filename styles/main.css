@@ -1,0 +1,426 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Bold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Medium.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.woff) format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-light: #F2F2F2;
+  --color-blue: #2D4872;
+  --color-black: #171616;
+  --color-green: #6CAC3D;
+  --color-blue-2: #2D4872;
+  --color-gray: #C4C4C4;
+  --width-desktop: 1200px;
+}
+
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure, fieldset):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями и видео
+ */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара
+   */
+  scrollbar-gutter: stable;
+  /**
+    Плавный скролл
+   */
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Нормализация высоты элемента ссылки при его инспектировании в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+  Убирает серую подсветку при тапе на мобильных устройствах (iOS/Android)
+ */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут fill со значением 'none' или начинается с 'url')
+ */
+:where([fill]:not([fill=none],
+[fill^=url])) {
+  fill: currentColor;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут stroke со значением 'none')
+ */
+:where([stroke]:not([stroke=none],
+[stroke^=url])) {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Приведение рамок таблиц в классический 'collapse' вид
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.header__info {
+  max-width: var(--width-desktop);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 35px;
+}
+@media (max-width: 1024px) {
+  .header__info {
+    max-width: 970px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: "a c d e" "b b b b";
+  }
+}
+@media (max-width: 600px) {
+  .header__info {
+    max-width: 590px;
+    display: flex;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__nav {
+    grid-column: 1/-1;
+    border-top: 1px solid var(--color-green);
+    border-bottom: 1px solid var(--color-green);
+    padding: 15px 0px;
+    margin: 10px 0px;
+  }
+}
+@media (max-width: 600px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.header__burger {
+  display: none;
+}
+@media (max-width: 600px) {
+  .header__burger {
+    display: block;
+    background: none;
+    border: none;
+  }
+}
+
+.header__logo {
+  margin-right: 10px;
+}
+@media (max-width: 1024px) {
+  .header__logo {
+    grid-area: a;
+  }
+}
+
+.header__menu {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-right: 10px;
+}
+@media (max-width: 1024px) {
+  .header__menu {
+    grid-area: b;
+  }
+}
+
+.header__link-active {
+  color: var(--color-blue);
+}
+
+.header__call {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  font-size: 10px;
+}
+@media (max-width: 1024px) {
+  .header__call {
+    grid-area: c;
+  }
+}
+@media (max-width: 600px) {
+  .header__call {
+    display: none;
+  }
+}
+
+.header__phone {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-black);
+  gap: 5px;
+  font-size: 12px;
+}
+
+.header__time {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.header__socials-group {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header__socials-group {
+    display: flex;
+    justify-content: space-between;
+    grid-area: d;
+  }
+}
+@media (max-width: 600px) {
+  .header__socials-group {
+    display: none;
+  }
+}
+
+.header__socials {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.button__call {
+  background: none;
+  border-radius: 5px;
+  max-width: 150px;
+  height: 45px;
+  padding: 0 15px;
+}
+@media (max-width: 1024px) {
+  .button__call {
+    height: 45px;
+    grid-area: e;
+  }
+}
+@media (max-width: 600px) {
+  .button__call {
+    width: 65px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    background: var(--color-green);
+  }
+  .button__call .button__text {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .button--outline {
+    width: 60px;
+    height: 45px;
+  }
+}
+
+.button__icon {
+  display: none;
+}
+@media (max-width: 600px) {
+  .button__icon {
+    display: block;
+    width: 50%;
+    filter: brightness(0) invert(1);
+  }
+}
+
+.button--outline {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid var(--color-green);
+  color: var(--color-green);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--width-desktop);
+  margin: 0 auto;
+  padding: 0 15px;
+}/*# sourceMappingURL=main.css.map */
