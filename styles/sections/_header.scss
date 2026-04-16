@@ -1,27 +1,26 @@
 @use '../media' as *;
 
 .header__info {
-    max-width: var(--width-desktop);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1fr;
     align-items: center;
+    gap: 10px;
     margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 35px;
 
     @include tablet{
         max-width: 970px;
-        display: grid;
-        justify-content: space-between;
+        grid-template-columns: 1fr 1.5fr 1fr 1fr;
         grid-template-areas:
         "a c d e"
         "b b b b";
     }
 
     @include mobile {
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        grid-template-areas:
+        "f a g";
         max-width: 590px;
-        display: flex;
         padding: 0 20px;
     }
 }
@@ -45,6 +44,7 @@
     display: none;
 
     @include mobile {
+        grid-area: f;
         display: block;
         background: none;
         border: none;
@@ -52,7 +52,6 @@
 }
 
 .header__logo {
-    margin-right: 10px;
 
      @include tablet {
       grid-area: a;
@@ -80,7 +79,6 @@
 .header__call {
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
     font-size: 10px;
 
     @include tablet {
@@ -125,7 +123,6 @@
 .header__socials {
     width: 40px;
     height: 40px;
-    margin-right: 10px;
 }
 
 .button__call {
@@ -136,11 +133,13 @@
     padding: 0 15px;
 
     @include tablet{
+        justify-self: end;
         height: 45px;
         grid-area: e;
     }
 
     @include mobile {
+        grid-area: g;
         width: 65px;
         height: 45px;
         display: flex;
