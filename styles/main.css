@@ -388,13 +388,6 @@ svg * {
   }
 }
 
-@media (max-width: 600px) {
-  .button--outline {
-    width: 60px;
-    height: 45px;
-  }
-}
-
 .button__icon {
   display: none;
 }
@@ -433,4 +426,86 @@ svg * {
     max-width: 100%;
     padding: 0 20px;
   }
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal__overlay {
+  width: 30%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  text-align: center;
+  position: relative;
+  gap: 50px;
+  padding: 40px 30px;
+  width: 70%;
+  height: 100%;
+  background: var(--color-light);
+}
+
+.btn__modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  transform: translateX(100%);
+  background: none;
+  border: none;
+}
+
+.modal__btn--call {
+  width: 100%;
+  margin: 0 auto;
+  height: 60px;
+  color: var(--color-light);
+  background: var(--color-green);
+  border: none;
+  border-radius: 10px;
+}
+
+.modal__btn--calc {
+  height: 60px;
+  color: var(--color-green);
+  background: none;
+  border: 1px solid var(--color-green);
+  border-radius: 10px;
+}
+
+.modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.modal__list_item a {
+  font-family: "Roboto", sans-serif;
+  color: var(--color-black);
+  font-weight: 300;
+  font-size: 20px;
+}
+.modal__list_item a li {
+  margin: 15px 0;
 }/*# sourceMappingURL=main.css.map */

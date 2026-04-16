@@ -6,9 +6,8 @@
     <link rel="stylesheet" href="styles/main.css">
     <title>MaxProff</title>
 </head>
-<body>
-    <header class="header__info container">
-        <button class="header__burger" aria-label="Открыть меню">
+<header class="header__info container">
+        <button class="header__burger is-open" aria-label="Открыть меню">
             <img src="./icons/header_burger.svg" alt="">
         </button>
         <div class="header__logo">
@@ -55,5 +54,26 @@
             <img class="button__icon" src="./icons/phone_icon.svg" alt="">
         </button>
     </header>
+<body>
+    <div class="modal active" id="modal">
+        <div class="modal__content">
+            <button class="btn__modal__close">
+                <img src="./icons/btn_close_modal.svg" alt="close"></button>
+            <button class="modal__btn--call">Заказать звонок</button>
+            <button class="modal__btn--calc button--outline">Калькулятор ремонта</button>
+
+            <ul class="modal__list">
+                <li class="modal__list_item"><a href="">Ремонт квартир</a></li>
+                <li class="modal__list_item"><a href="">Дизайн интерьера</a></li>
+                <li class="modal__list_item"><a href="">Ремонт комнат</a></li>
+                <li class="modal__list_item"><a href="">Дома и котетджи</a></li>
+                <li class="modal__list_item"><a href="">Другие услуги</a></li>
+            </ul>
+
+        </div>
+        <div class="modal__overlay"></div>      
+        
+    </div>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
