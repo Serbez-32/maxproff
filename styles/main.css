@@ -594,6 +594,7 @@ body {
 
 .price-calculator__info {
   display: grid;
+  padding: 20px;
 }
 
 .price-calculator__title span {
