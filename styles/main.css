@@ -25,8 +25,8 @@
   --color-blue: #2D4872;
   --color-black: #171616;
   --color-green: #6CAC3D;
-  --color-blue-2: #2D4872;
   --color-gray: #C4C4C4;
+  --color-gray-alt: rgb(109, 107, 103);
   --width-desktop: 1200px;
 }
 
@@ -377,7 +377,6 @@ svg * {
 @media (max-width: 600px) {
   .button__call {
     grid-area: g;
-    width: 65px;
     height: 45px;
     display: flex;
     justify-content: center;
@@ -426,6 +425,11 @@ svg * {
     max-width: 100%;
     padding: 0 20px;
   }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
 }
 
 .modal {
@@ -508,4 +512,193 @@ svg * {
 }
 .modal__list_item a li {
   margin: 15px 0;
+}
+
+.services {
+  max-width: var(--width-desktop);
+  font-family: "Roboto", sans-serif;
+}
+@media (max-width: 600px) {
+  .services {
+    display: none;
+  }
+}
+
+.services__menu {
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  border-top: 1px solid var(--color-green);
+  border-bottom: 1px solid var(--color-green);
+}
+
+.services__dropdown ul {
+  font-weight: 100;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services__dropdown a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.services__dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.services__dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.services__dropdown summary::after {
+  content: "›";
+  font-size: 25px;
+  margin-left: 12px;
+  transition: transform 0.25s ease;
+}
+
+.services__dropdown[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.price-calculator__inner {
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%), url(../../images/banner.png);
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 1024px) {
+  .price-calculator__inner {
+    flex-direction: column;
+  }
+  .price-calculator__inner .price-calculator__info {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .price-calculator__inner {
+    margin-top: 20px;
+  }
+}
+
+.price-calculator__info {
+  display: grid;
+}
+
+.price-calculator__title span {
+  background-color: var(--color-green);
+  border-radius: 5px;
+  color: var(--color-light);
+}
+
+.benefits-calc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.benefits-calc-item p {
+  font-weight: 800;
+}
+
+.benefits-calc-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.calculation-form {
+  padding: 0 20px;
+}
+
+.price-calculator__calc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.price-calculator__calc h2 {
+  font-size: 15px;
+}
+
+.calc-property-selector {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-gray);
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.calc-property-selector h3 {
+  font-size: 15px;
+  color: var(--color-gray-alt);
+}
+
+.calc-repair-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.calc-room-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.calc-info-block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.calc-info-item p {
+  color: var(--color-blue);
+  font-weight: bold;
+}
+
+.calc-info-item h3 {
+  color: var(--color-blue);
+  font-weight: lighter;
+}
+
+.callback-form {
+  margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+  .phone-form__row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.calc_button_phone-form {
+  border: 1px solid var(--color-green);
+  color: var(--color-green);
+  border-radius: 5px;
+  background: none;
+}
+
+.phone-form__input {
+  border: 1px solid var(--color-gray);
+}
+
+.phone-form__title {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=main.css.map */

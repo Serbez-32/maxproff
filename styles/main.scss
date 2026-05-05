@@ -5,4 +5,6 @@
 @use './sections/header';
 @use './components/buttons';
 @use './utils';
-@use './components/modal'
+@use './components/modal';
+@use './sections/services-menu';
+@use './sections/price-calculator';

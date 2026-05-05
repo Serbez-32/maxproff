@@ -16,6 +16,4 @@ export default function initModalMobile() {
     modalOverlay.addEventListener('click', () => {
         modal.classList.remove('active');
     })
-
-    console.log('+');
 }
