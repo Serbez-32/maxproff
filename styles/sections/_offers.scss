@@ -1,0 +1,66 @@
+@use '../media' as *;
+
+.offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.client-offers_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: stretch;
+
+    @include tablet {
+        display: flex;
+        overflow-x: auto; 
+        width: 100%;
+        scroll-snap-type: x mandatory;
+    }
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+}
+
+.client-offers__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 10px;
+    height: 500px;
+    flex-shrink: 0;
+}
+
+.client-offers__new-residents {
+    background:
+        linear-gradient(to top, #fff, transparent 60%),
+        url("../../images/newhome.png") center/cover no-repeat;
+}
+
+.client-offers__newlyweds {
+    background:
+        linear-gradient(to top, #fff, transparent 60%),
+        url("../../images/newlyweds.png") center/cover no-repeat;
+}
+
+.client-offers__seniors {
+    background: 
+    linear-gradient(to top, #ffff, transparent 60%),
+    url("../../images/pensioners.png");
+}
+
+.client-offers__card h3 {
+    font-size: 24px;
+}
+
+.client-offers__card p {
+    font-size: 16px;
+}
