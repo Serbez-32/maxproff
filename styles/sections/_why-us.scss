@@ -1,0 +1,46 @@
+@use '../media' as *;
+
+.why-us {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.why-us_image {
+    width: 40%; 
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.why-us__info {
+    display: flex;
+    align-items: flex-start;
+}
+
+.why-us_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.why-us__item {
+    flex: 0 0 210px;
+    align-items: center;
+}
+
+.why-us__item h3{
+    align-items: center;
+}
+
+.why-us_number {
+    color: var(--color-green);
+}
