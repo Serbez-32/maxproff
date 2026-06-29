@@ -360,6 +360,17 @@ svg * {
   height: 40px;
 }
 
+.button__icon {
+  display: none;
+}
+@media (max-width: 600px) {
+  .button__icon {
+    display: block;
+    width: 50%;
+    filter: brightness(0) invert(1);
+  }
+}
+
 .button__call {
   background: none;
   border-radius: 5px;
@@ -387,17 +398,6 @@ svg * {
   }
 }
 
-.button__icon {
-  display: none;
-}
-@media (max-width: 600px) {
-  .button__icon {
-    display: block;
-    width: 50%;
-    filter: brightness(0) invert(1);
-  }
-}
-
 .button--outline {
   font-family: "Roboto";
   font-size: 14px;
@@ -415,13 +415,24 @@ svg * {
   border-radius: 10px;
 }
 
+.team__tabs-button {
+  border-radius: 10px;
+  border: 1px solid var(--color-green);
+  background: none;
+}
+
+.team__tabs-button--active {
+  background-color: var(--color-green);
+  color: var(--color-light);
+}
+
 .container {
   width: 100%;
   max-width: var(--width-desktop);
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  padding: 0 35px;
+  padding-bottom: 25px;
 }
 @media (max-width: 1024px) {
   .container {
@@ -783,12 +794,6 @@ body {
   margin: 0;
 }
 
-.repair-card__woprks-item::before {
-  content: "✓ ";
-  position: relative;
-  left: 0;
-}
-
 .repair-card__top-info h3 {
   margin-top: 0;
   color: var(--color-green);
@@ -825,7 +830,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 25px;
 }
 
 .client-offers_list {
@@ -888,7 +892,6 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 25px;
-  margin-bottom: 50px;
 }
 
 .work-process__list {
@@ -923,14 +926,49 @@ body {
 .team {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.team__tabs {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+.team__card {
+  display: none;
+}
+
+.team__card-img {
+  width: 40%;
+  align-self: flex-start;
+}
+
+.team__card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team__card-name {
+  color: var(--color-green);
+}
+
+.team__card--active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .why-us {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 25px;
 }
 
 .why-us_image {
@@ -942,13 +980,18 @@ body {
 }
 @media (max-width: 1024px) {
   .why-us_image {
-    display: none;
+    width: 90%;
   }
 }
 
 .why-us__info {
   display: flex;
-  align-items: flex-start;
+}
+@media (max-width: 1024px) {
+  .why-us__info {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .why-us_list {
@@ -971,4 +1014,10 @@ body {
 
 .why-us_number {
   color: var(--color-green);
+}
+
+.list-item::before {
+  content: "✓ ";
+  position: relative;
+  left: 0;
 }/*# sourceMappingURL=main.css.map */

@@ -69,12 +69,6 @@
     margin: 0;
 }
 
-.repair-card__woprks-item::before {
-    content: "✓ ";
-    position: relative;
-    left: 0;
-}
-
 .repair-card__top-info h3 {
   margin-top: 0;
   color: var(--color-green);

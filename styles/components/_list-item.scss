@@ -1,0 +1,5 @@
+.list-item::before {
+    content: "✓ ";
+    position: relative;
+    left: 0;
+}

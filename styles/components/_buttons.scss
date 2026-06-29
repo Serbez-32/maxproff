@@ -1,3 +1,30 @@
+@use '../media' as *;
+
+.button__call {
+    background: none;
+    border-radius: 5px;
+    max-width: 150px;
+    height: 45px;
+    padding: 0 15px;
+
+    @include tablet{
+        justify-self: end;
+        height: 45px;
+        grid-area: e;
+    }
+
+    @include mobile {
+        grid-area: g;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        background: var(--color-green);
+
+        .button__text {
+            display: none;
+        }
+    }
+}
 
 .button--outline {
     font-family: 'Roboto';
@@ -14,4 +41,15 @@
     background: var(--color-green);
     border: none;
     border-radius: 10px;
+}
+
+.team__tabs-button {
+    border-radius: 10px;
+    border: 1px solid var(--color-green);
+    background: none;
+}
+
+.team__tabs-button--active {
+    background-color: var(--color-green);
+    color: var(--color-light);
 }

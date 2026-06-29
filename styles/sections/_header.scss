@@ -125,32 +125,6 @@
     height: 40px;
 }
 
-.button__call {
-    background: none;
-    border-radius: 5px;
-    max-width: 150px;
-    height: 45px;
-    padding: 0 15px;
-
-    @include tablet{
-        justify-self: end;
-        height: 45px;
-        grid-area: e;
-    }
-
-    @include mobile {
-        grid-area: g;
-        height: 45px;
-        display: flex;
-        justify-content: center;
-        background: var(--color-green);
-
-        .button__text {
-            display: none;
-        }
-    }
-}
-
 .button__icon {
     display: none;
 

@@ -1,5 +1,43 @@
+@use '../media' as *;
+
 .team {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.team__tabs {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.team__card {
+    display: none;
+}
+
+.team__card-img {
+    width: 40%;
+    align-self: flex-start;
+}
+
+.team__card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.team__card-name {
+    color: var(--color-green);
+}
+
+.team__card--active {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
