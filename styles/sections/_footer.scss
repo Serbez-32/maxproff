@@ -1,0 +1,35 @@
+@use '../media' as *;
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: var(--color-gray);
+    background-color: var(--color-black);
+    padding: 40px;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.footer__logo {
+    padding: 40px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--color-gray);
+}
+
+.footer__contacts a {
+    text-decoration: none;
+    color: var(--color-gray);
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
