@@ -33,3 +33,13 @@ footer {
     flex-direction: column;
     padding: 40px;
 }
+
+.footer__nav {
+    text-align: center;
+}
+
+.footer__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
