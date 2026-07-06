@@ -1072,7 +1072,6 @@ summary {
   background-size: contain;
 }
 
-/* минус при открытии */
 .faq__item[open] .faq__question::before {
   background: url("../icons/minus.svg") no-repeat center;
   background-size: contain;
