@@ -4,6 +4,7 @@ export default function initModalMobile() {
     const modal = document.querySelector('.modal');
     const closeBtn = document.querySelector('.btn__modal__close');
     const modalOverlay = document.querySelector('.modal__overlay');
+    const modalLinks = document.querySelectorAll('.modal__list a');
 
     openBtn.addEventListener('click', () => {
         modal.classList.add('active');
@@ -16,4 +17,10 @@ export default function initModalMobile() {
     modalOverlay.addEventListener('click', () => {
         modal.classList.remove('active');
     })
+
+    modalLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            modal.classList.remove('active');
+    })
+ });
 }

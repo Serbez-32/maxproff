@@ -21,6 +21,7 @@
   font-display: swap;
 }
 :root {
+  --color-white: #ffffff;
   --color-light: #F2F2F2;
   --color-blue: #2D4872;
   --color-black: #171616;
@@ -233,11 +234,16 @@ svg * {
   }
 }
 .header__info {
+  position: sticky;
+  top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1.2fr 1fr;
   align-items: center;
+  z-index: 100;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   gap: 10px;
-  margin-top: 25px;
+  padding: 25px;
 }
 @media (max-width: 1024px) {
   .header__info {
@@ -461,8 +467,14 @@ body {
   font-weight: 100;
 }
 
+*[id] {
+  scroll-margin-top: 30px;
+}
+
 .modal {
   position: fixed;
+  top: 0;
+  z-index: 1000;
   inset: 0;
   height: 100%;
   display: flex;
@@ -977,6 +989,7 @@ body {
 .why-us {
   display: flex;
   align-items: center;
+  text-align: center;
   flex-direction: column;
 }
 

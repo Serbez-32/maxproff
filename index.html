@@ -12,12 +12,13 @@
             <img src="./icons/header_burger.svg" alt="">
         </button>
         <div class="header__logo">
-            <img src="./icons/MaxProff.svg" alt="MaxProff">
-        </div>
+    <a href="#">
+        <img src="./icons/MaxProff.svg" alt="MaxProff"></a>
+    </div>
         <nav class="header__nav">
             <ul class="header__menu">
                 <li class="header__item">
-                    <a class="header__link header__link-active">Цены</a>
+                    <a class="header__link header__link-active">Скидка</a>
                 </li>
                 <li class="header__item">
                     <a href="#services" class="header__link">Услуги</a>
@@ -100,7 +101,7 @@
 </div>
 </section>
 
-<section class="price-calculator container">
+<section id="price-calculator" class="price-calculator container">
     <div class="price-calculator__inner">
         <div class="price-calculator__info">
             <h1 class="price-calculator__title">РЕМОНТ КВАРТИР</br> В МОСКВЕ И МО</br> от <span>  2450 </span> руб/м2</h1>
@@ -651,7 +652,6 @@
 <footer id="footer" class="container">
     <div class="footer__logo">
         <a href="#home"><img href="#home" src="./icons/MaxProff_footer.png" alt="Логотип компании"></a>
-        
     </div>
     <nav class="footer__nav" aria-label="Навигация в подвале">
         <h3>НАШИ УСЛУГИ</h3>
@@ -679,14 +679,15 @@
             <button class="btn__modal__close">
                 <img src="./icons/btn_close_modal.svg" alt="close"></button>
             <button class="modal__btn--call">Заказать звонок</button>
-            <button class="modal__btn--calc button--outline">Калькулятор ремонта</button>
 
             <ul class="modal__list">
-                <li class="modal__list_item"><a href="">Ремонт квартир</a></li>
-                <li class="modal__list_item"><a href="">Дизайн интерьера</a></li>
-                <li class="modal__list_item"><a href="">Ремонт комнат</a></li>
-                <li class="modal__list_item"><a href="">Дома и котетджи</a></li>
-                <li class="modal__list_item"><a href="">Другие услуги</a></li>
+                <li class="modal__list_item"><a href="#price-calculator">Калькулятор скидки</a></li>
+                <li class="modal__list_item"><a href="#services">Услуги</a></li>
+                <li class="modal__list_item"><a href="#offers">Акции</a></li>
+                <li class="modal__list_item"><a href="#why-us">Преимущества</a></li>
+                <li class="modal__list_item"><a href="vk.com/MaxProff">Блог</a></li>
+                <li class="modal__list_item"><a href="#team">Наши специалисты</a></li>
+                <li class="modal__list_item"><a href="#footer">Контакты</a></li>
             </ul>
 
         </div>

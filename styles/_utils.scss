@@ -27,3 +27,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
+
+*[id] {
+    scroll-margin-top: 30px;
+}
