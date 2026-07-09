@@ -468,6 +468,11 @@ html {
     scroll-padding-top: 190px;
   }
 }
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+}
 
 body {
   font-family: "Roboto", sans-serif;

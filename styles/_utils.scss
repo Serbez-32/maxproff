@@ -24,6 +24,10 @@ html {
     @include tablet {
       scroll-padding-top: 190px;
     }
+
+    @include mobile {
+      scroll-padding-top: 100px;
+    }
 }
 
 body {
