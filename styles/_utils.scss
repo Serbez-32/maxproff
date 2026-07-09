@@ -10,24 +10,23 @@
 
   @include tablet {
     max-width: 970px;
-    padding: 0 25px;
   }
 
   @include mobile {
     max-width: 100%;
-    padding: 0 20px;
   }
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+
+    @include tablet {
+      scroll-padding-top: 190px;
+    }
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-}
-
-*[id] {
-    scroll-margin-top: 30px;
 }
