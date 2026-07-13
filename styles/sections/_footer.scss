@@ -32,6 +32,7 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 40px;
+    gap: 10px;
 }
 
 .footer__nav {
@@ -42,4 +43,33 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.footer__phone::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url(/icons/call_phone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 8px;
+}
+
+.footer__email::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url(/icons/email.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 8px;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
 }
