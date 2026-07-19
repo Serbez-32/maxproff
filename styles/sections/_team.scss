@@ -23,12 +23,22 @@
 .team__card-img {
     width: 40%;
     align-self: flex-start;
+
+    @include mobile {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+    }
 }
 
 .team__card-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @include mobile {
+        padding: 0 30px;
+    }
 }
 
 .team__card-name {
@@ -38,6 +48,10 @@
 .team__card--active {
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 10px;
+
+        @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
 }

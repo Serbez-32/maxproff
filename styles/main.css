@@ -683,7 +683,6 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--color-black);
-  border-bottom: 1px solid var(--color-gray);
   padding-bottom: 10px;
   font-size: 15px;
 }
@@ -717,33 +716,6 @@ body {
 .calc-info-item h3 {
   color: var(--color-blue);
   font-weight: lighter;
-}
-
-.callback-form {
-  margin-top: 15px;
-}
-
-@media (max-width: 600px) {
-  .phone-form__row {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-}
-
-.calc_button_phone-form {
-  border: 1px solid var(--color-green);
-  color: var(--color-green);
-  border-radius: 5px;
-  background: none;
-}
-
-.phone-form__input {
-  border: 1px solid var(--color-gray);
-}
-
-.phone-form__title {
-  margin-bottom: 10px;
 }
 
 .repair-types {
@@ -969,11 +941,23 @@ body {
   width: 40%;
   align-self: flex-start;
 }
+@media (max-width: 600px) {
+  .team__card-img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
+}
 
 .team__card-info {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+@media (max-width: 600px) {
+  .team__card-info {
+    padding: 0 30px;
+  }
 }
 
 .team__card-name {
@@ -983,8 +967,13 @@ body {
 .team__card--active {
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 10px;
+}
+@media (max-width: 600px) {
+  .team__card--active {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .why-us {
@@ -1193,7 +1182,7 @@ footer {
   content: "";
   width: 25px;
   height: 25px;
-  background-image: url(/icons/call_phone.png);
+  background-image: url("../icons/call_phone.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1204,7 +1193,7 @@ footer {
   content: "";
   width: 25px;
   height: 25px;
-  background-image: url(/icons/email.png);
+  background-image: url("../icons/email.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

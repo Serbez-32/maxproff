@@ -33,7 +33,7 @@
                     <a href="#team" class="header__link">Специалисты</a>
                 </li>
                 <li class="header__item">
-                    <a href="https://vk.com/MaxProff" class="header__link">Блог</a>
+                    <a href="#portfolio" class="header__link">Ремонты</a>
                 </li>
                 <li class="header__item">
                     <a href="#footer" class="header__link">Контакты</a>
@@ -126,81 +126,90 @@
         </div>
 
         <div class="price-calculator__calc">
-            <h2>РАСЧИТАЙТЕ СТОИМОСТЬ РЕМОНТА</h2>
-            <div class="calculation-form">
-                <div class="calc-property-selector">
-                    <h3>Вид ремонта:</h3>
-                    <div class="calc-repair-group">
-                    <label>
-                        <input type="radio" name="property_type" value="1">Косметический
-                    </label>
-                    <label>
-                        <input type="radio" name="property_type" value="2">Капитальный
-                    </label>
-                    <label>
-                        <input type="radio" name="property_type" value="3">Под ключ
-                    </label>
-                    <label>
-                        <input type="radio" name="property_type" value="4">Дизайнерский
-                    </label>
-                    </div>
-                </div>
-                <div class="calc-property-selector">
-                    <h3>Тип вашей недвижимости:</h3>
-                    <label>
-                        <input type="radio" name="property_type" value="1">Новостройка
-                    </label>
-                    <label>
-                        <input type="radio" name="property_type" value="2">Вторичное жилье
-                    </label>
-                </div>
-                <div class="calc-property-selector">
-                    <h3>Колличество комнат:</h3>
-                    <div class="calc-room-selector">
-                    <label>
-                        <input type="radio" name="property_type" value="1">1
-                    </label>
-                    <label>
-                        <input type="radio" name="property_type" value="1">2
-                    </label>
-                    <label>
-                        <input type="radio" name="property_type" value="1">3
-                    </label>
-                    <label>
-                        <input type="radio" name="property_type" value="1">4
-                    </label>
-                    </div>
-
-                </div>
-                <div class="calc-property-selector">
-                    <div class="calc-area-range">
-                    <label for="range"><h3>Площадь, м2:</h3></label>
-                    <input type="range" id="range" name="range" min="0" max="35" value="0">
-                    <span id="rangeValue">0</span>
-                    </div>
-                </div>
-                <div class="calc-property-selector calc-info-block">
-                    <div class="calc-info-item">
-                        <h3>Срок ремонта:</h3>
-                        <p>до 34 дней</p>
-                    </div>
-                    <div class="calc-info-item">
-                        <h3>Скидка составит:</h3>
-                        <p>23 765 руб</p>
-                    </div>
-                </div>
-                <div class="callback-form calc-property-selector">
-                    <form class="phone-form">
-                    <h3 class="phone-form__title">Введите номер телефона</h3>
-
-                    <div class="phone-form__row">
-                    <input type="tel" placeholder="+7 " class="phone-form__input">
-                    <button type="submit" class="calc_button_phone-form">Отправить</button>
-                </div>
-                    </form>
-                </div>
+    <h2>РАССЧИТАЙТЕ СТОИМОСТЬ РЕМОНТА</h2>
+    <form class="calculation-form">
+        <div class="calc-property-selector">
+            <h3>Вид ремонта:</h3>
+            <div class="calc-repair-group">
+                <label>
+                    <input type="radio" name="repair_type" value="cosmetic">
+                    Косметический
+                </label>
+                <label>
+                    <input type="radio" name="repair_type" value="capital">
+                    Капитальный
+                </label>
+                <label>
+                    <input type="radio" name="repair_type" value="turnkey">
+                    Под ключ
+                </label>
+                <label>
+                    <input type="radio" name="repair_type" value="designer">
+                    Дизайнерский
+                </label>
             </div>
         </div>
+        <div class="calc-property-selector">
+            <h3>Тип вашей недвижимости:</h3>
+            <label>
+                <input type="radio" name="property_type" value="new">
+                Новостройка
+            </label>
+            <label>
+                <input type="radio" name="property_type" value="secondary">
+                Вторичное жильё
+            </label>
+        </div>
+        <div class="calc-property-selector">
+            <h3>Количество комнат:</h3>
+            <div class="calc-room-selector">
+                <label>
+                    <input type="radio" name="rooms" value="1">
+                    1
+                </label>
+                <label>
+                    <input type="radio" name="rooms" value="2">
+                    2
+                </label>
+                <label>
+                    <input type="radio" name="rooms" value="3">
+                    3
+                </label>
+                <label>
+                    <input type="radio" name="rooms" value="4">
+                    4
+                </label>
+            </div>
+        </div>
+        <div class="calc-property-selector">
+            <div class="calc-area-range">
+                <label for="area-range">
+                    <h3>Площадь, м²:</h3>
+                </label>
+                <input
+                    type="range"
+                    id="area-range"
+                    name="area"
+                    min="0"
+                    max="100"
+                    value=""
+                >
+                <span id="area-value">0</span>
+            </div>
+        </div>
+        <div class="calc-property-selector calc-info-block">
+            <div class="calc-info-item">
+                <h3>Срок ремонта:</h3>
+                <p>до 34 дней</p>
+            </div>
+            <div class="calc-info-item">
+                <h3>Скидка составит:</h3>
+                <p>23 765 руб.</p>
+            </div>
+        </div>
+        <button class="repair-card__buttom-call">Получить скидку</button>
+    </form>
+</div>
     </div>
 </section>
 
@@ -227,6 +236,8 @@
             <li class="list-item">Демонтаж старой электрики</li>
             <li class="list-item">Черновые работы</li>
             <li class="list-item">Грунтовка стен и пола</li>
+            <li class="list-item">Шпатлевка стен</li>
+            <li class="list-item">Покраска стен и потолков</li>
         </ul>
         <div class="repair-card__buttom">
             <div class="repair-card__price"><p class="some-class">от 3 245 руб/м2</p>
@@ -316,6 +327,7 @@
             <li class="list-item">Черновые работы</li>
             <li class="list-item">Грунтовка стен и пола</li>
             <li class="list-item">Шпатлевка и штукатурка стен</li>
+            <li class="list-item">Монтаж освещения</li>
         </ul>
         <div class="repair-card__buttom">
             <div class="repair-card__price"><p class="some-class">от 9 800 руб/м2</p>
@@ -325,6 +337,21 @@
         </div>
     </article>
     </section>
+</section>
+
+<section id="portfolio" class="portfolio container">
+    <h2 class="portfolio__title">Примеры наших работ:</h2>
+    <div class="prtfolio__tabs">
+        <button class="portfolio__tab portfolio__tab--active">Косметический</button>
+        <button class="portfolio__tab">Капитальный</button>
+        <button class="portfolio__tab">Под ключ</button>
+        <button class="portfolio__tab">Дизайнерский</button>
+    </div>
+    <div class="portfolio__slider">
+        <button class="portfolio__arow portfolio__arow--prev"></button>
+        <div class="portfolio__slide"></div>
+        <button class="portfolio__arow portfolio__arow--next"></button>
+    </div>
 </section>
 
 <section id="offers" class="offers container">
@@ -671,9 +698,9 @@
             mail@mail.ru
         </a>
         <div class="footer__social">
-            <a href="https:whatsapp.com/"><img src="/icons/whatsapp.svg" alt="whatsapp"></a>
-            <a href="https:telegram.com/"><img src="/icons/telegram.svg" alt="telegram"></a>
-            <a href="https:viber.com/"><img src="/icons/viber.svg" alt="viber"></a>
+            <a href="https:whatsapp.com/"><img src="./icons/whatsapp.svg" alt="whatsapp"></a>
+            <a href="https:telegram.com/"><img src="./icons/telegram.svg" alt="telegram"></a>
+            <a href="https:viber.com/"><img src="./icons/viber.svg" alt="viber"></a>
         </div>
     </div>
 </footer>
