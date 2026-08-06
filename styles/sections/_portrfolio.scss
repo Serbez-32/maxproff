@@ -1,0 +1,67 @@
+@use '../media' as *;
+
+.portfolio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin-top: 75px;
+}
+
+.portfolio__slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 100%;
+
+    @include tablet {
+        gap: 10px;
+    }
+
+    @include mobile {
+        gap: 5px;
+    }
+}
+
+.portfolio__slide {
+    max-width: 700px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.portfolio__arrow {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+
+    @include tablet {
+        width: 40px;
+        height: 40px;
+    }
+
+    @include mobile {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.portfolio__arrow--prev {
+    background-image: url("/icons/slider-arrow.png");
+}
+
+.portfolio__arrow--next {
+    background-image: url("/icons/slider-arrow.png");
+    transform: scaleX(-1);
+}

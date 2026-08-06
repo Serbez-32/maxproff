@@ -1,7 +1,7 @@
 export default function initNavigation() {
     const links = document.querySelectorAll('.header__link');
     const sections = document.querySelectorAll(
-        '#price-calculator, #services, #team, #offers, #why-us, #footer'
+        '#price-calculator, #services, #portfolio, #team, #offers, #why-us, #footer'
     );
 
     function setActiveLink() {

@@ -440,6 +440,19 @@ svg * {
   color: var(--color-light);
 }
 
+.portfolio__tabs-button {
+  border-radius: 10px;
+  border: 1px solid var(--color-green);
+  background: none;
+  padding: 5px;
+  margin: 5px;
+}
+
+.portfolio__tab--active {
+  background-color: var(--color-green);
+  color: var(--color-light);
+}
+
 .container {
   width: 100%;
   max-width: var(--width-desktop);
@@ -459,6 +472,11 @@ svg * {
   }
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 65px;
@@ -470,13 +488,8 @@ html {
 }
 @media (max-width: 600px) {
   html {
-    scroll-padding-top: 70px;
+    scroll-padding-top: 60px;
   }
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
 }
 
 .modal {
@@ -723,7 +736,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .repair-tapes__list {
@@ -1205,4 +1218,73 @@ footer {
   justify-content: space-between;
   gap: 10px;
   margin-top: 10px;
+}
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+  margin-top: 75px;
+}
+
+.portfolio__slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  .portfolio__slider {
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .portfolio__slider {
+    gap: 5px;
+  }
+}
+
+.portfolio__slide {
+  max-width: 700px;
+}
+.portfolio__slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.portfolio__arrow {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .portfolio__arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .portfolio__arrow {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.portfolio__arrow--prev {
+  background-image: url("/icons/slider-arrow.png");
+}
+
+.portfolio__arrow--next {
+  background-image: url("/icons/slider-arrow.png");
+  transform: scaleX(-1);
 }/*# sourceMappingURL=main.css.map */

@@ -6,6 +6,8 @@ import initNavigation from './modules/navigation.js';
 
 import initCalc from './modules/calculator.js';
 
+import initPortfolioSwitcher from './modules/portfolioTabs.js';
+
 initCalc();
 
 initModalMobile();
@@ -13,3 +15,5 @@ initModalMobile();
 initTeamSwitcher();
 
 initNavigation();
+
+initPortfolioSwitcher();

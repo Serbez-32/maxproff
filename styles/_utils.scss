@@ -17,6 +17,11 @@
   }
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 65px;
@@ -26,11 +31,6 @@ html {
     }
 
     @include mobile {
-      scroll-padding-top: 70px;
+      scroll-padding-top: 60px;
     }
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
 }

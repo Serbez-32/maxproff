@@ -22,6 +22,9 @@
                 </li>
                 <li class="header__item">
                     <a href="#services" class="header__link">Услуги</a>
+                <li class="header__item">
+                    <a href="#portfolio" class="header__link">Ремонты</a>
+                </li>
                 </li>
                 <li class="header__item">
                     <a href="#offers" class="header__link">Акции</a>
@@ -31,9 +34,6 @@
                 </li>
                 <li class="header__item">
                     <a href="#team" class="header__link">Специалисты</a>
-                </li>
-                <li class="header__item">
-                    <a href="#portfolio" class="header__link">Ремонты</a>
                 </li>
                 <li class="header__item">
                     <a href="#footer" class="header__link">Контакты</a>
@@ -341,16 +341,32 @@
 
 <section id="portfolio" class="portfolio container">
     <h2 class="portfolio__title">Примеры наших работ:</h2>
-    <div class="prtfolio__tabs">
-        <button class="portfolio__tab portfolio__tab--active">Косметический</button>
-        <button class="portfolio__tab">Капитальный</button>
-        <button class="portfolio__tab">Под ключ</button>
-        <button class="portfolio__tab">Дизайнерский</button>
-    </div>
+    <p>Другие примеры работ и отзывы наших клиентов, можно найти в наших соц. сетях</p>
+    <div class="portfolio__tabs">
+    <button class="portfolio__tabs-button portfolio__tab--active" data-tab="cosmetic">
+        Косметический
+    </button>
+    <button class="portfolio__tabs-button" data-tab="capital">
+        Капитальный
+    </button>
+    <button class="portfolio__tabs-button" data-tab="turnkey">
+        Под ключ
+    </button>
+    <button class="portfolio__tabs-button" data-tab="designer">
+        Дизайнерский
+    </button>
+</div>
     <div class="portfolio__slider">
-        <button class="portfolio__arow portfolio__arow--prev"></button>
-        <div class="portfolio__slide"></div>
-        <button class="portfolio__arow portfolio__arow--next"></button>
+        <button class="portfolio__arrow portfolio__arrow--prev"></button>
+        <div class="portfolio__slide">
+            <img 
+            class="portfolio__image" 
+            src="./images/cosmetic/remont_1.png" 
+            width="700px"
+            height="500px"
+            alt="">
+        </div>
+        <button class="portfolio__arrow portfolio__arrow--next"></button>
     </div>
 </section>
 
@@ -714,9 +730,9 @@
             <ul class="modal__list">
                 <li class="modal__list_item"><a href="#price-calculator">Калькулятор скидки</a></li>
                 <li class="modal__list_item"><a href="#services">Услуги</a></li>
+                <li class="modal__list_item"><a href="#portfolio">Наши работы</a></li>
                 <li class="modal__list_item"><a href="#offers">Акции</a></li>
                 <li class="modal__list_item"><a href="#why-us">Преимущества</a></li>
-                <li class="modal__list_item"><a href="vk.com/MaxProff">Блог</a></li>
                 <li class="modal__list_item"><a href="#team">Наши специалисты</a></li>
                 <li class="modal__list_item"><a href="#footer">Контакты</a></li>
             </ul>
